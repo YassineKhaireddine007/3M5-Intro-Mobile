@@ -9,6 +9,9 @@ class Café private constructor(
     fun creme(nb: Int): Café = Café(ajouts + List(nb) { "crème" to 0.5 })
     fun lait(nb: Int): Café = Café(ajouts + List(nb) { "lait" to 0.4 })
     fun sucre(nb: Int): Café = Café(ajouts + List(nb) { "sucre" to 0.2 })
+    fun vanillefr(nb: Int) : Café = Café(ajouts + List(nb) {"Vanille Francaise " to 1.00})
+
+
 
     fun prix(): Double = 1.0 + ajouts.sumOf { it.second }
 
@@ -41,4 +44,8 @@ fun main() {
     val cafe3 = Café()
     println(cafe3)
     println(cafe3.prix())
+
+    val cafe4 = Café().
+    vanillefr(2)
+    println(cafe4)
 }
